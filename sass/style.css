@@ -1,0 +1,162 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap");
+body {
+  background: url("../images/bg-intro-mobile.png"), hsl(315, 48%, 49%);
+  background-position: center;
+  background-repeat: repeat;
+  font-size: 1em;
+  font-family: "Poppins", sans-serif;
+}
+@media (min-width: 768px) {
+  body {
+    background: url("../images/bg-intro-desktop.png"), hsl(315, 48%, 49%);
+    background-position: center;
+    background-repeat: repeat;
+  }
+}
+
+*, * *, *::after, *::before {
+  box-sizing: border-box;
+}
+
+main {
+  min-height: 100vh;
+  max-width: min(100vw, 600px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: auto;
+  margin-right: auto;
+}
+@media (min-width: 768px) {
+  main {
+    max-width: min(90vw, 1000px);
+    flex-direction: row;
+    gap: 1em;
+  }
+  main > * {
+    width: 50%;
+  }
+}
+
+.content {
+  color: white;
+  text-align: center;
+  padding: 1em;
+}
+.content h1 {
+  line-height: 1.25em;
+}
+@media (min-width: 768px) {
+  .content {
+    text-align: left;
+    padding: 1.5em;
+    font-size: 0.9em;
+  }
+  .content h1 {
+    font-size: 2.5em;
+  }
+}
+
+.signup {
+  padding: 1em;
+  text-align: center;
+  display: flex;
+  gap: 1.5em;
+  flex-direction: column;
+  flex-wrap: nowrap;
+}
+
+.signup__pricing, .signup__form {
+  border-radius: 8px;
+}
+
+.signup__pricing {
+  box-shadow: 0px 0.45em 0px 0px hsl(0, 64%, 65%);
+  background-color: hsl(248, 32%, 49%);
+  padding: 0.5em;
+  text-align: inherit;
+  color: white;
+  font-size: 0.8em;
+}
+
+.signup__form {
+  box-shadow: 0px 0.45em 0px 0px hsl(316, 69%, 63%);
+  background-color: white;
+  padding: 1.5em;
+  position: relative;
+}
+.signup__form input {
+  width: 100%;
+  height: 3em;
+  padding: 0 1em;
+  margin-top: 0.9em;
+  font-family: inherit;
+  font-weight: bolder;
+}
+.signup__form input:not([type=submit]) {
+  border: 1px solid rgb(228, 226, 226);
+  border-radius: 4px;
+}
+.signup__form input + span.error-icon {
+  position: absolute;
+  right: 2.5em;
+  padding-top: 1.25em;
+}
+.signup__form input + span.error-icon img {
+  height: 1em;
+  width: 1em;
+}
+.signup__form input ~ span.error-message {
+  position: relative;
+  display: block;
+  width: 100%;
+  text-align: right;
+  padding-top: 0;
+  color: hsl(315, 48%, 49%);
+  font-size: 0.65em;
+  font-style: italic;
+  font-weight: 500;
+}
+.signup__form input.error {
+  border: 2px solid hsl(315, 48%, 49%);
+}
+
+input[type=submit] {
+  box-shadow: 0px 0.3em 0px 0px hsl(154, 58%, 44%);
+  border: none;
+  border-radius: 4px;
+  background-color: hsl(154, 59%, 51%);
+  text-transform: uppercase;
+  color: white;
+  font-weight: lighter;
+  letter-spacing: 1px;
+  padding-top: 6px;
+  cursor: pointer;
+}
+input[type=submit]:hover {
+  box-shadow: 0px 0.3em 0px 0px hsl(154, 59%, 51%);
+  background-color: hsl(154, 75%, 58%);
+}
+
+.terms-notice {
+  display: block;
+  margin-top: 1em;
+  padding: 0.5em;
+  font-size: 0.75em;
+  color: hsl(246, 25%, 77%);
+}
+.terms-notice span {
+  color: hsl(315, 48%, 49%);
+  font-weight: bolder;
+}
+
+footer {
+  text-align: center;
+  color: white;
+  font-size: smaller;
+}
+footer a {
+  color: inherit;
+}/*# sourceMappingURL=style.css.map */
